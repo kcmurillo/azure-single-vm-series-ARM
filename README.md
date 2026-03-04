@@ -2,7 +2,7 @@
 
 `Add-Single-VM-series-template.json`
 
-This ARM template deploys a single Palo Alto Networks VM-Series next-generation firewall with three network interfaces (management, untrust, trust) into an Azure resource group.
+This ARM template deploys a single Palo Alto Networks VM-Series next-generation firewall with three network interfaces (management, untrust, trust) into an existing Azure resource group.
 
 > This template is released under an as-is, best effort, and is community supported.
 
