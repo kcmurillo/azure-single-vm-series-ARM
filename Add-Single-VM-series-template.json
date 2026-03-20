@@ -246,15 +246,24 @@
     },
     "availabilitySetName": {
       "type": "string",
-      "defaultValue": "None"
+      "defaultValue": "None",
+      "metadata": {
+        "description": "Name of the availability set. Use 'None' to disable."
+      }
     },
     "availabilitySetPlatformFaultDomainCount": {
       "type": "int",
-      "defaultValue": 2
+      "defaultValue": 2,
+      "metadata": {
+        "description": "Fault domain count for the availability set."
+      }
     },
     "availabilitySetPlatformUpdateDomainCount": {
       "type": "int",
-      "defaultValue": 5
+      "defaultValue": 5,
+      "metadata": {
+        "description": "Update domain count for the availability set."
+      }
     },
     "resourceTags": {
       "type": "object",
@@ -587,7 +596,7 @@
             }
           ]
         },
-        "availabilitySet": "[if(equals(parameters('availabilitySetName'), 'None'), json('null'), variables('availabilitySet'))]",
+        "availabilitySet": "[if(equals(parameters('availabilitySetName'), 'None'), null(), variables('availabilitySet'))]",
         "diagnosticsProfile": {
           "bootDiagnostics": {
             "enabled": true
